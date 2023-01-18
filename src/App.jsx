@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { Configuration, OpenAIApi } from "openai";
+import favicon from "/public/favicon.png";
 
 function App() {
   const input = useRef(null);
@@ -9,8 +10,8 @@ function App() {
   const openai = new OpenAIApi(configuration);
   const [prompt, setPrompt] = useState("");
   const [progress, setProgress] = useState(false);
-  const [image, setImage] = useState("./public/favicon.png");
-
+  const [image, setImage] = useState(favicon);
+  console.log(image);
   const handleSend = async () => {
     input.current.value = "";
     setProgress(true);
