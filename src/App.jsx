@@ -11,7 +11,7 @@ function App() {
   const [prompt, setPrompt] = useState("");
   const [progress, setProgress] = useState(false);
   const [image, setImage] = useState(favicon);
-  console.log(image);
+  
   const handleSend = async () => {
     input.current.value = "";
     setProgress(true);
